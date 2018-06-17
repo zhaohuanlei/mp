@@ -7,65 +7,71 @@
     <title>第1课：介绍</title>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/league.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="reveal">
         <div class="slides">
-            <section>
-                <h2>Reveal.js</h2>
-                <p>一个能够帮助我们很轻易地使用 HTML 创建一个漂亮的演示文稿的框架。</p>
+            <section data-background="img/intro.jpg">
+                <p>
+                    <img style="width:16rem;height:16rem;border-radius:100%;" src="img/avatar.jpeg" alt="">
+                </p>
+                <h4 class="name">赵欢磊</h4>
+                <p class="intro">
+                    微信：sanshi1988
+                    <br/> 广州微粤信息科技有限公司
+                </p>
+            </section>
+            <section data-transition="fade">
+                <h2>小程序啥东东？</h2>
+                <p class="fragment">小程序是基于微信一个封闭的生态</p>
+                <p class="fragment">一种不无需安装即可使用的应用，有体积大小限制</p>
+                <p class="fragment">小程序是“跨平台”的，只需开发一套，安卓、IOS通用</p>
+            </section>
+            <section data-background="#ee1a1a" id="s4">
+                <h2>小程序能干哈？</h2>
+                <ul style="white-space: nowrap;">
+                    <li>车来了：查公交</li>
+                    <li>12306：买火车票</li>
+                    <li>找厕所：你会需要的</li>
+                    <li>大姨妈：这个没用过</li>
+                    <li>京东购物：买买买</li>
+                    <li>群暗恋：你懂的</li>
+                    <li>更多的等你开发...</li>
+                </ul>
             </section>
             <section>
-                <h2>幻灯片切换方式</h2>
-                <p class="fragment">右下角控制条控制切换</p>
-                <p class="fragment">可以使用键盘方向键操作</p>
-                <p class="fragment">可以设置使用鼠标滚轮切换</p>
-                <p class="fragment">移动端滑动切换</p>
+                <h2>小程序需要啥技术？</h2>
+                <p class="fragment">结构层: html --> wxml 定义了一套新的标记语言</p>
+                <p class="fragment">表示层: css --> wxss 部分css3选择器不支持</p>
+                <p class="fragment">行为层: js --> 兼容大部分js，并提供了一些API</p>
+            </section>
+            <section data-transition="zoom" style="font-size:0.7em;">
+                <h2>一个完整项目的流程</h2>
+                <p class="fragment">接到需求</p>
+                <p class="fragment">产品经理：处理需求，并整理文档，制作原型</p>
+                <p class="fragment">研发：需求评审，如果需求合理，技术可以实现，就继续，否则修改需求</p>
+                <p class="fragment">UI：设计相关界面</p>
+                <p class="fragment">前端：写好布局、交互</p>
+                <p class="fragment">后端：写接口和文档,前后端联调</p>
+                <p class="fragment">测试：提bug，前后端修改bug</p>
+                <p class="fragment">最终上线</p>
             </section>
             <section>
-                <h2>自动滑动</h2>
-                <pre><code>
-        // 每 5 秒滑动一次，如果设置成0，则不自动滑动
-        Reveal.configure({
-          autoSlide: 5000
-        });
-                        </code></pre>
-            </section>
-            <section data-background="#ff0000" id="s4">
-                <h2>幻灯片背景</h2>
-                <p>幻灯片包含在幕的一个有限区域中，默认情况下，允许它们适应任何视口和缩放一致性。你可以通过给你的 &lt;section&gt; 元素添加一个 data-background 属性来在幻灯片之外添加整个页面的背景。支持四种类型的背景：
-                    color, image, video 和 iframe。</p>
+                <h2>注册开发者账号流程</h2>
+                <a href="https://mp.weixin.qq.com/" target="_blank">https://mp.weixin.qq.com/</a>
             </section>
             <section data-transition="zoom">
-                <h2>幻灯片切换效果</h2>
-                <p>局幻灯片切换效果是通过 transition 配置值来设定的。你可以通过指定&lt;section&gt;元素的 data-transition 属性来重写全局配置。</p>
-                <p>支持效果： none/fade/slide/convex/concave/zoom</p>
+                <h2>下载、安装官方开发工具</h2>
+                <p class="fragment">新建一个项目</p>
+                <p class="fragment">介绍常用的菜单选项</p>
             </section>
             <section>
-                <h2>嵌入式多媒体</h2>
-                <p>嵌入的 HTML5 &lt;video&gt;/&lt;audio&gt; 以及 YouTube 内联框架将会在你从一个幻灯片导航离开的时候自动暂停。这可以通过给你的元素指定一个 data-ignore 属性来禁止。</p>
-                <video class="stretch" data-autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+                <h2>helloword</h2>
             </section>
             <section>
-                <h2>内部链接</h2>
-                <p>在幻灯片之间链接是很容易的。下面的例子中，第一个链接指向了另外一个幻灯片的索引，第二个链接指向了另外一个幻灯片的ID属性 (&lt;section id="some-slide"&gt;)：</p>
-                <a href="#/s4">链接到第4张幻灯片</a>
-            </section>
-            <section>
-                <h2>概览与全屏模式</h2>
-                <p>点击 "Esc" 或 "o" 键来切换概览模式。当你在这种模式下的时候，你仍然可以在幻灯片之间导航。</p>
-                <p>只需要在你的键盘上点击 >>F
-                    << 按键即可进入全屏模式。点击>>ESC
-                        << 按键退出全屏模式。</p>
-            </section>
-            <section>
-                <h2>嵌入图片与链接</h2>
-                <img data-src="/attachments/fck/end.jpg">
-                <br/>
-                <a href="http://www.helloweba.net/javascript/378.html" target="_blank">点击查看教程</a>
+                <h2>最后，大家可以拜了个拜～～</h2>
             </section>
         </div>
     </div>
